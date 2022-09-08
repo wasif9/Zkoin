@@ -17,7 +17,7 @@ class Block{ //creating a block
     mineBlock(difficulty){  //difficulty in this case is the number if zeros infront of the hash
         while(this.hash.substring(0, difficulty) !== Array(difficulty + 1).join("0")){ // while the letters from the 0th letter to the difficulty th letter is not 0
             this.nonce++;
-            this.hash = this.calculateHash(); //keep recalculating the hash..
+            this.hash = this.calculateHash(); //keep recalculating the hash
 
         }
         console.log("Block mined: " + this.hash); //when the desired number of zeros are reached output block mined
