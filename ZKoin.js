@@ -50,7 +50,7 @@ class Blockchain{
     }
 
     minePendingTransaction(miningRewardAddress){ // this recieves the address of the miners wallet so when the block is successfully mined the miner recieves the reward there
-        let block = new Block(Date.now(), this.pendingTransactions);// this includes or passes all the pending transactions while in real life miners choose which transaction to include in the block
+        let block = new Block(Date.now(), this.pendingTransactions, this.Previoushash);// this includes or passes all the pending transactions while in real life miners choose which transaction to include in the block
         block.mineBlock(this.difficulty);
 
         console.log('block successfully mined!');
